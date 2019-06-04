@@ -1,0 +1,105 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+.login__page {
+	height: 100vh;
+	&-container{
+		height: 620px;
+		background-color: #9e9ad6;
+		transform: skewY(10deg) translateY(-88px);
+	}
+	&-form {
+		width: 400px;
+		margin: 0 auto;
+		padding: 50px;
+		position: relative;
+		top: -300px;
+		background-color: white;
+		border-radius: 4px;
+		box-shadow: 0px 0px 7px 1px rgba(100, 100, 100, .2);
+		h2{
+			font-family: inherit;
+			text-align: center;
+			color: rgba(114, 118, 120, .8);
+			padding-bottom: 20px;
+			font-size: 1.1em;	
+		}	
+	}
+}
+
+
+input[type="text"], input[type="password"], input[type="email"]{
+	width: 100%;
+	font-size: .8em;
+	border: 1px solid rgba(100, 100, 100, .5);
+	border: 0;
+	margin-bottom: 12px;
+	padding: 14px;
+	border-radius: 4px;
+	background-color: rgba(158, 154, 214, .1);
+	outline-width: 1px;
+}
+input::placeholder{
+	color : rgba(114, 118, 120, .5);
+}
+.btn{
+	background-color: #9e9ad6;
+	border: 0;
+	color: white;
+	padding: 10px 20px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	cursor: pointer;
+	font-weight: 700;
+}
+  
+  
+
+@import "media"; // Always at the end
